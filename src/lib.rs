@@ -17,7 +17,7 @@ pub struct AsyncPool<T: Send + 'static> {
     tx: RwLock<UnboundedSender<T>>,
 }
 
-// TODO: Avoid move-by-value
+// TODO: Avoid move-by-value (Issue #1)
 /// The guard on a resource's borrow. Returns the value to the `AsyncPool` on drop.
 pub struct AsyncPoolGuard<T: Send + 'static> {
     inner: Option<T>,
