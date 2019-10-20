@@ -3,11 +3,11 @@ use std::{
     sync::RwLock,
 };
 
-use futures::channel::mpsc::{
+use futures_channel::mpsc::{
     unbounded, UnboundedReceiver, UnboundedSender,
 };
-use futures::SinkExt;
-use futures::stream::StreamExt;
+use futures_util::SinkExt;
+use futures_util::stream::StreamExt;
 
 /// A collection for asynchronously reserving a resource from a pool
 pub struct AsyncPool<T: Send + 'static> {
