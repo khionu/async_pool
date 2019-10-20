@@ -1,0 +1,11 @@
+[package]
+name = "async_pool"
+description = "An async collection intended for sharing a pool of a given resource."
+keywords = ["async", "concurrent", "collection", "pool"]
+license = "Apache-2.0 OR MIT"
+version = "0.0.1"
+authors = ["Khionu Sybiern <dev@khionu.net>"]
+edition = "2018"
+
+[dependencies]
+futures-preview = { version = "0.3.0-alpha.19", features = ["async-await"] }
